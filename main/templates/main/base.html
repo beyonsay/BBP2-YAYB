@@ -113,7 +113,6 @@
 			<ul class="nav nav-pills nav-justified">
 				{% if user.is_authenticated %}
 				{% if user.is_superuser or user.is_staff %}
-				<!-- {% if user.username == 'BBPAdmin' %} -->
 				<a class="navbar-brand button-style" href="{% url 'admin:index' %}">
 					<img src="{% static '/images/parenthealth.png' %}" width="40" height="40" class="d-inline-block"
 						alt="">
