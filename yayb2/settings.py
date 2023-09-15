@@ -85,28 +85,22 @@ WSGI_APPLICATION = 'yayb2.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # "default": {
-    #     "ENGINE": "django.db.backends.postgresql",
-    #     "NAME": "yayb",
-    #     "USER": "admin",
-    #     "PASSWORD": "youandyourbaby",
-    #     "HOST": "database.cjg9ckuq0ifq.eu-north-1.rds.amazonaws.com",
-    #     "PORT": "5432",
-    #     'TEST': {
-    #         'NAME': 'mytestdatabase',
-    #     },
-    # }
     "default": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": "yayb",
         "USER": "admin",
         "PASSWORD": "youandyourbaby",
-        "HOST": "127.0.0.1",
-        "PORT": "5433",
-        'TEST': {
-            'NAME': 'mytestdatabase',
-        },
+        "HOST": "database.cjg9ckuq0ifq.eu-north-1.rds.amazonaws.com",
+        "PORT": "5432",
     }
+    # "default": {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     "NAME": "yayb",
+    #     "USER": "admin",
+    #     "PASSWORD": "youandyourbaby",
+    #     "HOST": "127.0.0.1",
+    #     "PORT": "5433",
+    # }
 }
 
 
@@ -167,3 +161,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
+# Configure Django App for Heroku on settings.py.
+# import django_on_heroku
+# django_on_heroku.settings(locals())
