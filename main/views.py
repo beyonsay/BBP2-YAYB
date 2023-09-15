@@ -1,9 +1,5 @@
 from django.shortcuts import render
 import os
-# Create your views here.
-# HttpResponse is used to
-# pass the information
-# back to view
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.template import loader

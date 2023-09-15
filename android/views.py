@@ -1,6 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
 from django.shortcuts import render
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.response import Response
@@ -15,7 +14,6 @@ from django.shortcuts import get_object_or_404
 
 from main.models import Content
 
-# Create your views here.
 @api_view(['POST'])
 def android_login(request):
     user = get_object_or_404(User, username=request.data['username'])

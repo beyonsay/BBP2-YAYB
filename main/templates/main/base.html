@@ -32,10 +32,7 @@
 		}
 
 		.main {
-			/* margin-left: 16em; */
 			padding: 0em 1em;
-			/* margin-top: 6em; */
-			/* Add margin to push the content below the sidenav */
 		}
 
 		.button-style {
@@ -80,7 +77,6 @@
 
 		#resultsContainer {
 			margin-top: 20px;
-			/* Add margin for spacing */
 		}
 	</style>
 
@@ -98,16 +94,6 @@
 		<a class="navbar-brand" href="{% url 'main:main' %}">
 			<img src="{% static '/images/BBP-Logo.png' %}" width="60" height="60" alt="Bhabhisana Baby Project logo">
 		</a>
-
-		<!-- <div class="search-container">
-			<div class="input-group search-box">
-				<input type="text" class="form-control" placeholder="Search" id="searchInput">
-				<div class="input-group-append">
-					<button class="btn btn-outline-secondary" type="button">Search</button>
-				</div>
-			</div>
-			<div id="resultsContainer"></div>
-		</div> -->
 
 		<div class="navbar-nav">
 			<ul class="nav nav-pills nav-justified">
@@ -140,7 +126,6 @@
 
 
 	<div id="content" name="content" class="main">
-		<!-- <h1 class="mt-2">My Site</h1> -->
 		<hr class="mt-0 mb-4">
 		{% block content %}
 		{% endblock %}
@@ -158,11 +143,9 @@
 </body>
 
 <footer class="bg-light text-center text-lg-start">
-	<!-- Copyright -->
 	<div class="text-center p-3">
 		<a href="{% url 'main:teesandcees' %}">Terms and Conditions</a>
 	</div>
-	<!-- Copyright -->
 </footer>
 
 </html>
