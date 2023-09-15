@@ -1,5 +1,16 @@
+# 'main(request)': Displays the main page of the application and retrieves public content items for display.
+
+# 'content(request, contentID)': Displays a specific content item based on the provided 'contentID' in the URL.
+
+# 'search_suggestions(request)': Provides search suggestions based on a query parameter and returns them as a JSON response.
+
+# 'get_content_by_category(request)': Placeholder for serving content by category, returns an empty JSON response. This is needed for the filtering of ECD content at the bottom of the page
+
+# 'category(request, category)': Displays content items that match a specified 'category'.
+
+# 'teesandcees(request)': Renders the terms and conditions page.
+
 from django.shortcuts import render
-import os
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from django.template import loader

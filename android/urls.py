@@ -1,3 +1,9 @@
+# URL patterns for the 'android' app:
+# - 'android_login': Handles Android login requests.
+# - 'android_logout': Handles Android logout requests.
+# - 'test_token': Handles requests for testing tokens.
+# - 'get_all_content': Handles requests to retrieve all content.
+# - 'get_assigned_content': Handles requests to retrieve assigned content.
 from django.urls import re_path
 from . import views
 

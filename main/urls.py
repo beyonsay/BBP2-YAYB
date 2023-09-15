@@ -15,6 +15,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
+# URL patterns for the 'main' app:
+
+# - The empty path ('') maps to the 'main' view, the main page of the application.
+# - 'get_content' maps to the 'get_content_by_category' view, possibly for fetching content by category.
+# - 'teesandcees/' maps to the 'teesandcees' view, likely for terms and conditions.
+# - 'content/<str:contentID>/' maps to the 'content' view, where 'contentID' is a variable in the URL.
+# - 'category/<str:category>/' maps to the 'category' view, where 'category' is a variable in the URL.
+
+# The 'if settings.DEBUG:' block adds a URL pattern for serving media files in debug mode:
+# - When the Django project is in DEBUG mode (development), it serves media files using the development server.
+# - This is done by appending a URL pattern that maps to media files to the 'urlpatterns'.
+# - The 'settings.MEDIA_URL' and 'settings.MEDIA_ROOT' settings determine where media files are served from.
+
 from django.urls import path
 from . import views
 from django.conf import settings

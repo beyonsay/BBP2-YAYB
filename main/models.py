@@ -1,3 +1,20 @@
+# Defining the 'Content' model:
+
+# The 'Content' model represents content items and has fields like 'title', 'file', 'visible', 'tag', 'topics', 'language', and 'assignedUsers'.
+# - It uses various choice fields for 'tag', 'topics', 'language', and 'visible'.
+# - 'assignedUsers' is a ManyToMany field representing users assigned to this content.
+
+# 'MyModelAdmin' is a custom admin class for the 'Content' model:
+# - Customizes the display of 'Content' objects in the Django admin interface.
+# - Defines 'list_display', 'search_fields', 'list_per_page', and 'formfield_overrides' for the admin interface.
+# - Adds a custom method 'display_assigned_users' to display assigned users in the admin panel.
+
+# The 'Meta' class inside the 'Content' model specifies the database table name.
+
+# The '__str__' method defines how 'Content' instances are displayed as strings (e.g., in the admin interface).
+
+# 'admin.site.register(Content, MyModelAdmin)' registers the 'Content' model with the Django admin interface and associates it with the 'MyModelAdmin' custom admin class.
+
 from django.db import models
 import uuid
 from django.contrib.auth.models import User

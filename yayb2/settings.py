@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-t9kfn*tx^zoez)atz@3o%^)b&#j$1a573p8c680*nom5f$maot
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'yayb.onrender.com', '127.0.0.1'] 
+ALLOWED_HOSTS = [ 'yayb.onrender.com', '127.0.0.1', 'localhost'] 
 
 
 # Application definition
@@ -117,9 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
-    # {
-    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    # },
+
 ]
 
 
@@ -161,6 +159,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = 'login'
-# Configure Django App for Heroku on settings.py.
-# import django_on_heroku
-# django_on_heroku.settings(locals())

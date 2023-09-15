@@ -1,4 +1,28 @@
-from django.shortcuts import render
+# View functions for handling Android app API endpoints:
+
+# `android_login`: Handles Android user login requests. Verifies user credentials and returns a token on success.
+# - Accepts a POST request with 'username' and 'password' in the request data.
+# - Validates the user's credentials and issues a token if valid.
+# - Returns a JSON response with the token and user data.
+
+# `test_token`: A test endpoint that requires authentication. Returns a simple message if the token is valid.
+# - Requires authentication via SessionAuthentication or TokenAuthentication.
+# - Returns a "passed!" message as a response if authentication is successful.
+
+# `get_all_content`: Retrieves all public content from the 'main' app.
+# - Requires authentication via SessionAuthentication or TokenAuthentication.
+# - Retrieves all content objects with 'visible' set to "public" and serializes them.
+# - Returns a JSON response with the serialized content data.
+
+# `android_logout`: Handles Android user logout requests. Deletes the user's token.
+# - Accepts a POST request to log the user out.
+# - Deletes the user's token (authentication token) to log them out.
+# - Returns a "Logged out successfully" message as a response.
+
+# `get_assigned_content`: Retrieves content assigned to the authenticated user.
+# - Requires authentication via SessionAuthentication or TokenAuthentication.
+# - Retrieves all content objects assigned to the authenticated user and serializes them.
+# - Returns a JSON response with the serialized content data.
 
 from django.shortcuts import render
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
